@@ -1,10 +1,8 @@
 <ul>
-  <ng-container *ngFor="let book of books;let i=index">
-    <li>
-      <div>{{i}}番目</div>
-      <div>{{book.title}}</div>
-      <div>{{book.author}}</div>
-      <div>{{book.price}}</div>
-    </li>
-  </ng-container>
+  <li>
+    <app-header></app-header>
+  </li>
+  <li *ngFor="let book of books;let i=index">
+    <app-item [i]="i" [book]="book"></app-item>
+  </li>
 </ul>
